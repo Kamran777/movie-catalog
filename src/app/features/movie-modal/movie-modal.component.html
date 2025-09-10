@@ -9,7 +9,7 @@
     </header>
 
     <div class="modal__content">
-      <img class="modal__poster" [src]="movie.poster" [alt]="movie.title" />
+      <img class="modal__poster" [src]="movie.poster" [alt]="movie.title" loading="lazy" />
 
       <div class="modal__info">
         <div class="modal__tags" *ngIf="movie.genres?.length">
