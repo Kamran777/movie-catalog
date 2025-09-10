@@ -1,59 +1,58 @@
-# MovieCatalog
+# 🎬 Movie Catalog (Angular)
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.2.
 
-## Development server
+An Angular application for browsing and searching movies.  
+Features include:
+- 🔎 Search movies by title
+- 📝 View detailed movie information in modal
+- 🎨 Responsive and modern UI
 
-To start a local development server, run:
+## 🚀 Getting Started
+
+### Clone the repo
+```bash
+git clone https://github.com/Kamran777/movie-catalog.git
+```
+
+## 📦 Installation & Setup
+
+- Frontend (Angular)
+```bash
+cd movie-catalog
+npm install
+ng serve OR ng serve -o
+```
+
+- Server JSON
 
 ```bash
-ng serve
+cd movie-catalog
+json-server --watch db/db.json --port 3000
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+JSON server: `http://localhost:3000/`
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Project screenshots
 
-```bash
-ng generate component component-name
-```
+- Desktop
+  
+<img width="1895" height="905" alt="image" src="https://github.com/user-attachments/assets/964c1765-7130-4aa2-bdca-4b5f6e3eeae9" />
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Mobile
 
-```bash
-ng generate --help
-```
+<img width="263" height="580" alt="image" src="https://github.com/user-attachments/assets/870f8b1c-8e75-4ef4-bd50-5322dd92b060" />
 
-## Building
+-Search
 
-To build the project run:
+<img width="1895" height="902" alt="image" src="https://github.com/user-attachments/assets/35a93002-134f-4512-b416-106bc14332a9" />
 
-```bash
-ng build
-```
+<img width="1895" height="895" alt="image" src="https://github.com/user-attachments/assets/956adf54-7d49-4bfd-858c-3c73c070e93b" />
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Modal
 
-## Running unit tests
+<img width="1895" height="902" alt="image" src="https://github.com/user-attachments/assets/a208f2f7-a0d6-413c-8d50-3d26231c86d5" />
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
