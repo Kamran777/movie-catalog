@@ -1,0 +1,39 @@
+<div class="modal" (click)="onBackdrop($event)" role="dialog" aria-modal="true">
+  <div class="modal__panel">
+    <header class="modal__header">
+      <h2 class="modal__title">
+        {{ movie.title }} <span style="opacity:.7;font-weight:400">({{ movie.year }})</span>
+      </h2>
+      <div class="modal__rating">{{ movie.rating | formatDecimal}}</div>
+      <button class="modal__close" (click)="close()" aria-label="Close">×</button>
+    </header>
+
+    <div class="modal__content">
+      <img class="modal__poster" [src]="movie.poster" [alt]="movie.title" />
+
+      <div class="modal__info">
+        <div class="modal__tags" *ngIf="movie.genres?.length">
+          <span class="tag" *ngFor="let g of movie.genres">{{ g }}</span>
+        </div>
+
+        <p class="modal__overview" style="margin-top:10px">{{ movie.overview }}</p>
+
+        <div class="modal__details">
+          <p *ngIf="movie.runtime"><strong>Продолжительность:</strong> {{ movie.runtime }} мин</p>
+          <p *ngIf="movie.productionCountries?.length"><strong>Страна:</strong> {{ movie.productionCountries?.join(', ')
+            }}</p>
+          <p *ngIf="movie.director"><strong>Режиссёр:</strong> {{ movie.director }}</p>
+          <p *ngIf="movie.cast?.length"><strong>В ролях:</strong> {{ movie.cast?.join(', ') }}</p>
+          <p *ngIf="movie.language"><strong>Язык:</strong> {{ movie.language }}</p>
+          <p *ngIf="movie.boxOffice">
+            <strong>Сборы в прокате:</strong> {{ movie.boxOffice | currency:'USD':'symbol' }}
+          </p>
+          <p *ngIf="movie.contentRating"><strong>Рейтинг:</strong> {{ movie.contentRating }}</p>
+          <p *ngIf="movie.trailerUrl">
+            <a [href]="movie.trailerUrl" class="modal__trailer-btn" target="_blank">▶ Смотреть Трейлер</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

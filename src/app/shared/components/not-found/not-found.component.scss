@@ -1,0 +1,43 @@
+@use 'abstracts/mixins' as *;
+
+.not-found {
+  text-align: center;
+
+  &__content {
+    padding: 7rem 2rem;
+
+    @include respond(md) {
+      padding: 6rem 1rem;
+    }
+  }
+
+  &__glitch {
+    position: relative;
+    animation: glitch 3s infinite;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 2rem;
+    font-weight: 400;
+
+    &::after {
+      content: '';
+      left: 0;
+      bottom: 0;
+      width: 70%;
+      align-self: center;
+      height: 3px;
+      background: var(--highlight);
+      border-radius: 2px;
+    }
+
+    @include respond(md) {
+      font-size: 1.5rem;
+    }
+
+    @include respond(sm) {
+      font-size: 1rem;
+    }
+  }
+}

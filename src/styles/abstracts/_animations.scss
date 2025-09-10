@@ -1,0 +1,25 @@
+@keyframes glitch {
+  0% {
+    transform: skew(0deg);
+  }
+  35% {
+    transform: skew(-3deg, 5deg);
+  }
+  65% {
+    transform: skew(3deg, -5deg);
+  }
+  100% {
+    transform: skew(0deg);
+  }
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.98);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

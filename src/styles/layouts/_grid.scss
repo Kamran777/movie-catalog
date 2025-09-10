@@ -1,0 +1,18 @@
+@use '../abstracts/mixins' as *;
+
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+
+  @include respond(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include respond(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  > * {
+    min-width: 0;
+  }
+}
