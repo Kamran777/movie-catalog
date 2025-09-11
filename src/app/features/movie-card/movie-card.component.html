@@ -1,6 +1,7 @@
 <article class="card" (click)="open.emit()" tabindex="0" role="button" (keydown.enter)="open.emit()"
   aria-label="Открыть карточку фильма">
-  <img class="card__poster" [src]="movie.poster" [alt]="movie.title" loading="lazy" />
+  <img class="card__poster" [src]="movie.poster" [alt]="movie.title" [attr.loading]="isLcp ? 'eager' : 'lazy'"
+    [attr.fetchpriority]="isLcp ? 'high' : null" />
   <div class="card__body">
     <h3 class="card__title">{{ movie.title }}</h3>
     <div class="card__meta">

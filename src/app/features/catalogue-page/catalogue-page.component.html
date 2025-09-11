@@ -17,8 +17,8 @@
     </div>
 
     <ol *ngIf="!isLoading && (movies()?.length ?? 0) > 0" class="grid" style="list-style: none; padding: 0; margin: 0;">
-      <li *ngFor="let movie of movies() ?? []; trackBy: trackByMovieId">
-        <app-movie-card [movie]="movie" (open)="selectMovie(movie)"></app-movie-card>
+      <li *ngFor="let movie of movies() ?? []; let i = index; trackBy: trackByMovieId">
+        <app-movie-card [movie]="movie" [isLcp]="i === 0" (open)="selectMovie(movie)"></app-movie-card>
       </li>
     </ol>
   </section>

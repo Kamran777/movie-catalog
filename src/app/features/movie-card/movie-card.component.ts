@@ -13,5 +13,6 @@ import { FormatDecimalPipe } from '../../shared/pipes/format-decimal.pipe';
 })
 export class MovieCardComponent {
   @Input({ required: true }) movie!: Movie;
+  @Input() isLcp = false;
   @Output() open = new EventEmitter<void>();
 }
