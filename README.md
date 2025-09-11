@@ -1,3 +1,8 @@
+# ❓Questions and Answers PDF
+
+[questions-and-answers.pdf](https://github.com/user-attachments/files/22285677/questions-and-answers.pdf)
+
+
 # 🎬 Movie Catalog (Angular)
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.2.
