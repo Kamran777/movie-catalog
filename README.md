@@ -29,7 +29,7 @@ npm install
 ng serve OR ng serve -o
 ```
 
-- Server JSON
+- Server JSON (Open another terminal)
 
 ```bash
 cd movie-catalog
